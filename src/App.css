@@ -21,9 +21,15 @@ body {
   font-weight: 800;
   background-color: var(--dark-blue);
 }
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
 
 .advice {
-  margin-top: 25rem !important;
   width: 50rem;
   min-height: 30rem;
   background-color: var(--dark-grayish-blue);
@@ -57,6 +63,10 @@ body {
 }
 .advice__divider {
   flex: 1;
+  background-image: url("./components/assets/pattern-divider-desktop.svg");
+  background-position-x: center;
+  background-size: 90%;
+  background-repeat: no-repeat;
 }
 
 .btn {
@@ -76,6 +86,17 @@ body {
   transition: 0.3s all;
 }
 
-.btn:hover {
-  box-shadow: 0px 8px 40px 0px var(--neon-green);
+@media (max-width: 960px) {
+  .advice {
+    width: 33rem;
+  }
+  .advice__divider {
+    background-image: url("./components/assets/pattern-divider-mobile.svg");
+  }
+}
+
+@media (hover: hover) {
+  .btn:hover {
+    box-shadow: 0px 8px 40px 0px var(--neon-green);
+  }
 }
